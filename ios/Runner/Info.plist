@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- ═══════════════════════════════════════════════════
+	     Bundle Identity
+	     ═══════════════════════════════════════════════════ -->
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>BLE Explorer</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>BLE Explorer</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+
+	<!-- ═══════════════════════════════════════════════════
+	     Device / UI Requirements
+	     ═══════════════════════════════════════════════════ -->
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+
+	<!-- Portrait + Portrait Upside-Down on iPhone -->
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<!-- All orientations on iPad -->
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+
+	<!-- ProMotion 120 Hz support -->
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+
+	<!-- Keyboard / Trackpad / Game Controller support -->
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+
+	<!-- ═══════════════════════════════════════════════════
+	     Bluetooth Permission Strings (App Store required)
+	     ═══════════════════════════════════════════════════ -->
+
+	<!-- iOS 13+ Central Manager usage (always required for BLE) -->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>BLE Explorer uses Bluetooth to scan, connect to, and communicate with nearby BLE devices. No location data is collected.</string>
+
+	<!-- iOS 12 and below legacy key -->
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>BLE Explorer uses Bluetooth to connect to BLE peripherals for inspection and diagnostics.</string>
+
+	<!-- ═══════════════════════════════════════════════════
+	     Location Permission Strings
+	     Required on iOS 12 and below for BLE scanning;
+	     iOS 13+ does NOT require location for BLE.
+	     Still declare to avoid App Store rejections on
+	     older OS reviews.
+	     ═══════════════════════════════════════════════════ -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location access is required on older iOS versions to scan for BLE devices. Your location is never stored or shared.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location access is required on older iOS versions to scan for BLE devices. Your location is never stored or shared.</string>
+
+	<!-- ═══════════════════════════════════════════════════
+	     File Sharing (for log export via share_plus)
+	     ═══════════════════════════════════════════════════ -->
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<false/>
+	<key>UIFileSharingEnabled</key>
+	<false/>
+
+	<!-- ═══════════════════════════════════════════════════
+	     App Transport Security
+	     ═══════════════════════════════════════════════════ -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
+</dict>
+</plist>
