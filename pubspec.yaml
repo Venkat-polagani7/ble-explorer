@@ -4,7 +4,7 @@ publish_to: 'none'
 
 # Semantic versioning: MAJOR.MINOR.PATCH+BUILD
 # Bump versionCode (build number) for every Play Store / App Store upload
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
